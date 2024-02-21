@@ -4,11 +4,11 @@
         <ExtensionPackage
          dependsOn=""
          description=""
-         haCompatible="false"
+         haCompatible="true"
          minimumThingWorxVersion="9.4.0"
          name="AsyncTasks"
-         packageVersion="1.0.31"
-         vendor="Vladimir Rosu">
+         packageVersion="1.0.32"
+         vendor="Open Source / Non-PTC supported / Vladimir Rosu">
             <JarResources>
                 <FileResource
                  description=""
