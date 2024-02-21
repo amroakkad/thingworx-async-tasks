@@ -1,6 +1,8 @@
 # thingworx-async-tasks
-[Unofficial/Not Supported] Contains the code of the ThingWorx AsyncTasks Extension built on Extension SDK version 9.4 (not provided here).
-[Work in progress]
+[**Unofficial/Not Supported**] Contains the code of the ThingWorx AsyncTasks Extension built on Extension SDK version 9.4 (not provided here).
+
+**This Extension is provided as-is and without warranty or support. It is not part of the PTC product suite. This project is licensed under the terms of the MIT license.**
+
 
 This is an Ant Eclipse (Version: 2023-12 (4.30.0)) project that uses the ThingWorx Eclipse plugin, available in the support.ptc.com portal under the ThingWorx platform downloads.
 1. Install the ThingWorx Eclipse plugin v 9.0.1.202102191527
@@ -11,6 +13,10 @@ This is an Ant Eclipse (Version: 2023-12 (4.30.0)) project that uses the ThingWo
 
 This is a CompletableFuture Java wrapper for ThingWorx, which allows executing multiple tasks asynchronously and accessing their result in the same service in a similar style as of Javascript Promise.
 
+The main usecase of this extension is to allow parallel execution of logic (encapsulated as a ThingWorx service) and retrieving the result of the Tasks executed in this manner in the scope of the original service.
+
+The execution time of the ProcessTasks service below = the execution time of the slowest Task supplied to it.
+
 
 ## How to Use in ThingWorx
 1. Download the extension from the Releases section.
@@ -18,6 +24,7 @@ This is a CompletableFuture Java wrapper for ThingWorx, which allows executing m
 3. Assign the **AsyncProcessing** ThingShape to any Thing or ThingTemplate. This will expose access to the **ProcessTasks** service.
 4. Process Tasks service takes as input a list of Tasks (1 Task = 1 combination of ThingName, ServiceName and InputParameters): <br>
   4.1 Create an infotable (PTC.AT.Input.Datashape) of Tasks: <br>
+  
   ```
 let tasks = DataShapes["PTC.AT.Input.Datashape"].CreateValues();
 tasks.AddRow({
@@ -32,10 +39,31 @@ tasks.AddRow({
 });
 ```
 <br>
-4.2 Execute the tasks by executing ProcessTasks with the infotable above as input
-```
+Note: 
+
+- Input parameters are passed in a custom JSON format:**{paramName: value}**, where paramName is the name of the called service input parameter.
+- Multiple parameters are supported: **{param1: value1, param2: value2}** etc.
+- **the only input parameter type supported is STRING** (if you want to pass Infotables, convert to JSON, then string and pass as such)
+<br>
+
+  4.2 Execute the tasks by executing ProcessTasks with the infotable above as input: <br>
+
+  ```
 result = me.ProcessTasks({
 	Tasks: tasks /* INFOTABLE {"dataShape":"PTC.AT.Input.Datashape"} */
 });
 ```
+
+<br>
+
+  4.3. Retrieve the result from the infotable (PTC.AT.OutputDatashape)
+
+  ![image](https://github.com/vrosu/thingworx-async-tasks/assets/11868471/356d7b32-90ef-4c5f-ba44-5f654c003593)
+
+Note:
+
+  - The only Output parameter type is STRING (if you want to pass an Infotable, convert to JSON, then string and pass as such)
+
+<br>
+
 **This Extension is provided as-is and without warranty or support. It is not part of the PTC product suite**. This project is licensed under the terms of the MIT license.
