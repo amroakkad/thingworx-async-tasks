@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities>
+    <ExtensionPackages>
+        <ExtensionPackage
+         dependsOn=""
+         description=""
+         haCompatible="false"
+         minimumThingWorxVersion="9.4.0"
+         name="AsyncTasks"
+         packageVersion="1.0.31"
+         vendor="Vladimir Rosu">
+            <JarResources>
+                <FileResource
+                 description=""
+                 file="asynctasks.jar"
+                 type="JAR"></FileResource>
+            </JarResources>
+        </ExtensionPackage>
+    </ExtensionPackages>
+    <ThingShapes>
+        <ThingShape
+         aspect.isEditableExtensionObject="false"
+         className="asynctasks.AsyncProcessing"
+         description=""
+         name="AsyncProcessing"></ThingShape>
+    </ThingShapes>
+</Entities>

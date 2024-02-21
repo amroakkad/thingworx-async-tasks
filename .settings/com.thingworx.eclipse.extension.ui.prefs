@@ -1,0 +1,7 @@
+build_framework=ANT
+eclipse.preferences.version=1
+ha_compatible=false
+min_thingworx_version=9.4.0
+package_version=1.0.31
+project_vendor=Vladimir Rosu
+sdk_location=C\:\\Users\\vrosu\\Downloads\\MED-61098-CD-094_F000_ThingWorx-Extension-SDK-9-4-0.zip
