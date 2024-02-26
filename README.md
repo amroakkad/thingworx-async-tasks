@@ -3,8 +3,11 @@
 
 **This Extension is provided as-is and without warranty or support. It is not part of the PTC product suite. This project is licensed under the terms of the MIT license.**
 
+Considering the statement above, in case you have any questions regarding this extension:
+- do **not** open PTC Technical Support tickets for this extension (since it is not part of the PTC product suite)
 
 This is an Ant Eclipse (Version: 2023-12 (4.30.0)) project that uses the ThingWorx Eclipse plugin, available in the support.ptc.com portal under the ThingWorx platform downloads.
+## How to use in Eclipse (to extend/fix its functionality)
 1. Install the ThingWorx Eclipse plugin v 9.0.1.202102191527
 2. Download the ThingWorx Extension SDK version 9.4. It should be a zip file.
 3. Import the project: Use the File Menu / Import / Projects from Folder or Archive.
