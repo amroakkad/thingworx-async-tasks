@@ -163,23 +163,15 @@ tasks.AddRow({
   OutputBaseType: "INFOTABLE", //INFOTABLE
 });
 
-result = me.XProcessTasks({
-  Tasks: tasks /* INFOTABLE {"dataShape":"PTC.AT.XInput.Datashape"} */
-});
 ```
 <br>
-Note: 
 
-- Input parameters are passed in a custom JSON format:**{paramName: value}**, where paramName is the name of the called service input parameter.
-- Multiple parameters are supported: **{param1: value1, param2: value2}** etc.
-- **the only input parameter type supported is STRING** (if you want to pass Infotables, convert to JSON, then string and pass as such)
-<br>
 
-  5.2 Execute the tasks by executing ProcessTasks with the infotable above as input: <br>
+  5.2 Execute the tasks by executing XProcessTasks with the infotable above as input: <br>
 
   ```
-result = me.ProcessTasks({
-	Tasks: tasks /* INFOTABLE {"dataShape":"PTC.AT.Input.Datashape"} */
+result = me.XProcessTasks({
+  Tasks: tasks /* INFOTABLE {"dataShape":"PTC.AT.XInput.Datashape"} */
 });
 ```
 
