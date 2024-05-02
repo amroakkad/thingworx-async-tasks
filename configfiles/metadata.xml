@@ -5,10 +5,10 @@
          dependsOn=""
          description=""
          haCompatible="true"
-         minimumThingWorxVersion="9.4.0"
+         minimumThingWorxVersion="9.3.9"
          name="AsyncTasks"
-         packageVersion="1.0.32"
-         vendor="Open Source / Non-PTC supported / Vladimir Rosu">
+         packageVersion="1.0.36"
+         vendor="Open Source / Non-PTC supported / Vladimir Rosu, Amro Akkad">
             <JarResources>
                 <FileResource
                  description=""
