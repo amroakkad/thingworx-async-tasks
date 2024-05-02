@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities build="b1648"
+          majorVersion="9"
+          minorVersion="3"
+          modelPersistenceProviderPackage="PostgresPersistenceProviderPackage"
+          revision="9"
+          schemaVersion="1134"
+          universal="">
+	<DataShapes>
+		<DataShape baseDataShape=""
+		           description=""
+		           documentationContent=""
+		           homeMashup=""
+		           lastModifiedDate="2024-04-27T15:21:40.758+02:00"
+		           name="PTC.AT.XInput.Datashape"
+		           projectName="PTCDefaultProject"
+		           tags="">
+			<Owner name="Administrator"
+			       type="User"/>
+			<avatar/>
+			<DesignTimePermissions>
+				<Create/>
+				<Read/>
+				<Update/>
+				<Delete/>
+				<Metadata/>
+			</DesignTimePermissions>
+			<RunTimePermissions/>
+			<VisibilityPermissions>
+				<Visibility/>
+			</VisibilityPermissions>
+			<ConfigurationTableDefinitions/>
+			<ConfigurationTables/>
+			<FieldDefinitions>
+				<FieldDefinition aspect.dataShape="PTC.AT.XInputParameters.Datashape"
+				                 aspect.isPrimaryKey="false"
+				                 baseType="INFOTABLE"
+				                 description=""
+				                 name="InputParameters"
+				                 ordinal="9"/>
+				<FieldDefinition aspect.isPrimaryKey="false"
+				                 baseType="STRING"
+				                 description=""
+				                 name="OutputBaseType"
+				                 ordinal="6"/>
+				<FieldDefinition aspect.isPrimaryKey="false"
+				                 baseType="STRING"
+				                 description=""
+				                 name="OutputEventTopic"
+				                 ordinal="7"/>
+				<FieldDefinition aspect.isPrimaryKey="false"
+				                 baseType="STRING"
+				                 description=""
+				                 name="Service"
+				                 ordinal="2"/>
+				<FieldDefinition aspect.isPrimaryKey="false"
+				                 baseType="THINGNAME"
+				                 description=""
+				                 name="ThingName"
+				                 ordinal="5"/>
+			</FieldDefinitions>
+			<ConfigurationChanges>
+				<ConfigurationChange changeAction="CREATE"
+				                     changeReason="header : name : updated&#10;"
+				                     timestamp="2024-04-27T15:14:48.409+02:00"
+				                     user="Administrator"/>
+				<ConfigurationChange changeAction="MODIFY"
+				                     changeReason="fields : InputParameters : deleted&#10;"
+				                     timestamp="2024-04-27T15:17:54.943+02:00"
+				                     user="Administrator"/>
+				<ConfigurationChange changeAction="MODIFY"
+				                     changeReason="fields : Input : added&#10;"
+				                     timestamp="2024-04-27T15:18:30.129+02:00"
+				                     user="Administrator"/>
+				<ConfigurationChange changeAction="MODIFY"
+				                     changeReason="fields : InputParameters : added, Input : deleted&#10;"
+				                     timestamp="2024-04-27T15:21:40.758+02:00"
+				                     user="Administrator"/>
+			</ConfigurationChanges>
+		</DataShape>
+	</DataShapes>
+</Entities>
