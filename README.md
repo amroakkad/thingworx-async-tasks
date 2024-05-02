@@ -179,7 +179,8 @@ result = me.XProcessTasks({
 
   5.3. Retrieve the result from the infotable (PTC.AT.OutputDatashape)
 
-  ![github-img](https://github.com/amroakkad/thingworx-async-tasks/assets/161345865/4f61aa98-4f5e-4806-a77b-30314c44f032)
+![github-img](https://github.com/amroakkad/thingworx-async-tasks/assets/161345865/88190bca-1941-44c9-9904-07f7386b4ddb)
+
 
 <br>
 
