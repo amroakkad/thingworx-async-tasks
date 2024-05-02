@@ -179,11 +179,7 @@ result = me.XProcessTasks({
 
   5.3. Retrieve the result from the infotable (PTC.AT.OutputDatashape)
 
-  ![image](<TODO img url>)
-
-Note:
-
-  - The only Output parameter type is STRING (if you want to pass an Infotable, convert to JSON, then string and pass as such)
+  ![github-img](https://github.com/amroakkad/thingworx-async-tasks/assets/161345865/4f61aa98-4f5e-4806-a77b-30314c44f032)
 
 <br>
 
