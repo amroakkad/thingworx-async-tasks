@@ -3,6 +3,6 @@ dependsOn=
 eclipse.preferences.version=1
 ha_compatible=true
 min_thingworx_version=9.3.9
-package_version=1.0.47
+package_version=1.0.48
 project_vendor=Open Source / Non-PTC supported / Vladimir Rosu, Amro Akkad
 sdk_location=C\:\\Users\\vrosu\\Downloads\\MED-61098-CD-094_F000_ThingWorx-Extension-SDK-9-4-0.zip
