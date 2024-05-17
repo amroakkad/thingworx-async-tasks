@@ -5,6 +5,7 @@
  universal="password">
     <DataShapes>
         <DataShape
+		aspect.isEditableExtensionObject="true"
          baseDataShape=""
          description="Used for the output infotable from ProcessTasks service from the AssyncProcessing ThingShape"
          documentationContent=""

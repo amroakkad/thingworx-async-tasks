@@ -5,6 +5,7 @@
  universal="password">
     <DataShapes>
         <DataShape
+		 aspect.isEditableExtensionObject="true"
          baseDataShape=""
          description=""
          documentationContent=""

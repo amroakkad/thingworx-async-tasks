@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
+	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<attributes>
 			<attribute name="module" value="true"/>
@@ -14,9 +15,8 @@
 	<classpathentry kind="lib" path="twx-lib/logback-classic-1.2.9.jar"/>
 	<classpathentry kind="lib" path="twx-lib/slf4j-api-1.7.32.jar"/>
 	<classpathentry kind="lib" path="twx-lib/logback-core-1.2.9.jar"/>
-	<classpathentry kind="lib" path="twx-lib/thingworx-communications-client-9.3.0-b20.jar"/>
-	<classpathentry kind="lib" path="twx-lib/thingworx-ext-sdk-9.3.0-b20.jar"/>
-	<classpathentry kind="lib" path="twx-lib/thingworx-javadocs-9.3.0-b20.jar"/>
-	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/thingworx-communications-client-9.3.0-b20.jar"/>
+	<classpathentry kind="lib" path="lib/thingworx-ext-sdk-9.3.0-b20.jar"/>
+	<classpathentry kind="lib" path="lib/thingworx-javadocs-9.3.0-b20.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
