@@ -4,23 +4,17 @@
 package asynctasks;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 import org.slf4j.Logger;
 
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.thingworx.data.util.InfoTableInstanceFactory;
-import com.thingworx.entities.utils.EntityUtilities;
 import com.thingworx.entities.utils.ThingUtilities;
 import com.thingworx.logging.LogUtilities;
 import com.thingworx.metadata.annotations.ThingworxServiceDefinition;
 import com.thingworx.metadata.annotations.ThingworxServiceParameter;
 import com.thingworx.metadata.annotations.ThingworxServiceResult;
-import com.thingworx.relationships.RelationshipTypes.ThingworxRelationshipTypes;
 import com.thingworx.security.context.SecurityContext;
 import com.thingworx.things.Thing;
 import com.thingworx.types.InfoTable;
@@ -48,17 +42,17 @@ public class AsyncProcessing {
 	}
 
 	@SuppressWarnings("rawtypes")
-	@ThingworxServiceDefinition(name = "XProcessTasks", description = "", category = "", isAllowOverride = false, aspects = {
+	@ThingworxServiceDefinition(name = "ProcessTasks", description = "", category = "", isAllowOverride = false, aspects = {
 			"isAsync:false" })
 	@ThingworxServiceResult(name = "Result", description = "", baseType = "INFOTABLE", aspects = {
-			"isEntityDataShape:true", "dataShape:PTC.AT.XOutput.Datashape" })
+			"isEntityDataShape:true", "dataShape:PTC.AT.Output.Datashape" })
 	public InfoTable ProcessTasks(
 			@ThingworxServiceParameter(name = "Tasks", description = "Extended Processing of Tasks. Supporting all types for input parameters and output parameters.", baseType = "INFOTABLE", aspects = {
-					"isRequired:true", "isEntityDataShape:true", "dataShape:PTC.AT.XInputDatashape" }) InfoTable Tasks)
+					"isRequired:true", "isEntityDataShape:true", "dataShape:PTC.AT.InputDatashape" }) InfoTable Tasks)
 			throws Exception {
-		_logger.trace("Entering Service: XProcessTasks");
+		_logger.trace("Entering Service: ProcessTasks");
 		// 1. Create an output Infotable as results placeholder
-		InfoTable iftbl_TaskOutput = InfoTableInstanceFactory.createInfoTableFromDataShape("PTC.AT.XOutput.Datashape");
+		InfoTable iftbl_TaskOutput = InfoTableInstanceFactory.createInfoTableFromDataShape("PTC.AT.Output.Datashape");
 
 		// 2. Record the current security context to pass to the Completable Future, as
 		// they don't inherit the current context
@@ -79,7 +73,7 @@ public class AsyncProcessing {
 				ValueCollection serviceParameters = new ValueCollection();
 
 				InfoTable itp = InfoTableInstanceFactory
-						.createInfoTableFromDataShape("PTC.AT.XInputParameters.Datashape");
+						.createInfoTableFromDataShape("PTC.AT.InputParameters.Datashape");
 
 				String strThingName = row.getStringValue("ThingName");
 				String strServiceName = row.getStringValue("Service");
@@ -163,7 +157,7 @@ public class AsyncProcessing {
 					return vc;
 				});
 				tasks.add(future);
-				_logger.trace("Exiting Service: XProcessTasks");
+				_logger.trace("Exiting Service: ProcessTasks");
 			}
 
 			// 4. All Tasks have been added to the ArrayList, it's now time to execute them.
