@@ -7,7 +7,7 @@
          haCompatible="true"
          minimumThingWorxVersion="9.3.9"
          name="AsyncTasks"
-         packageVersion="1.0.47"
+         packageVersion="1.0.48"
          vendor="Open Source / Non-PTC supported / Vladimir Rosu, Amro Akkad">
             <JarResources>
                 <FileResource

@@ -69,12 +69,6 @@
 				                 name="ThingName"
 				                 ordinal="1"/>
 			</FieldDefinitions>
-			<ConfigurationChanges>
-				<ConfigurationChange changeAction="CREATE"
-				                     changeReason="header : name : updated&#10;fields : OutputComplexResult : added&#10;"
-				                     timestamp="2024-04-29T17:00:09.997+02:00"
-				                     user="Administrator"/>
-			</ConfigurationChanges>
 		</DataShape>
 	</DataShapes>
 </Entities>
